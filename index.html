@@ -514,40 +514,44 @@
 <!-- Carousel JS -->
 <script>
   const images = [
-    "https://i.imgur.com/vQHLCur.jpeg",
-    "https://i.imgur.com/gUPj6P9.jpeg",
-    "https://i.imgur.com/9BKm8MQ.jpeg",
-    "https://i.imgur.com/cCXoiae.jpeg",
-    "https://i.imgur.com/ebMTTUd.jpeg",
-    "https://i.imgur.com/6Xrs2Ey.jpeg",
-    "https://i.imgur.com/cVy7E4w.jpeg",
-    "https://i.imgur.com/j6iOPZy.jpeg",
-    "https://i.imgur.com/hLQDes6.jpeg",
-    "https://i.imgur.com/fDgw0z0.jpeg",
-    "https://i.imgur.com/eeh6Xwl.jpeg",
-    "https://i.imgur.com/dYzkDY2.jpeg",
-    "https://i.imgur.com/GXXsufp.jpeg",
-    "https://i.imgur.com/0P7gBnA.jpeg",
-    "https://i.imgur.com/xNi8GNU.jpeg",
-    "https://i.imgur.com/nWRFlE9.jpeg",
-    "https://i.imgur.com/yO3iwBp.jpeg",
-    "https://i.imgur.com/tbcgiba.jpeg",
-    "https://i.imgur.com/74eoQgg.jpeg",
-    "https://i.imgur.com/EiW3GSh.jpeg",
-    "https://i.imgur.com/ewsHYN3.jpeg"
+    "https://i.imgur.com/VwlCln5.jpeg",
+    "https://i.imgur.com/Ck3ion8.jpeg",
+    "https://i.imgur.com/eN9W5ee.jpeg",
+    "https://i.imgur.com/bFC6IVi.jpeg",
+    "https://i.imgur.com/s2h6zNk.jpeg",
+    "https://i.imgur.com/1SEpAH2.jpeg",
+    "https://i.imgur.com/LaYE6ih.jpeg",
+    "https://i.imgur.com/FyqJdl6.jpeg",
+    "https://i.imgur.com/2bFkGQO.jpeg",
+    "https://i.imgur.com/bmWsENW.jpeg",
+    "https://i.imgur.com/LtkDiUb.jpeg",
+    "https://i.imgur.com/gSkYczg.jpeg",
+    "https://i.imgur.com/xPAnUke.jpeg",
+    "https://i.imgur.com/3vKOZtO.jpeg",
+    "https://i.imgur.com/CGQQRdh.jpeg",
+    "https://i.imgur.com/tWAkRrU.jpeg",
+    "https://i.imgur.com/Q4pTo5j.jpeg",
+    "https://i.imgur.com/3ndt7aC.jpeg",
+    "https://i.imgur.com/Db8bKZT.jpeg",
+    "https://i.imgur.com/qKUuR0R.jpeg"
   ];
 
   let currentIndex = 0;
   const img = document.getElementById("carouselImage");
 
-  setInterval(() => {
-    img.style.opacity = 0;
-    setTimeout(() => {
-      currentIndex = (currentIndex + 1) % images.length;
-      img.src = images[currentIndex];
-      img.style.opacity = 1;
-    }, 400);
-  }, 3500);
+  // segurança extra
+  if (img) {
+    setInterval(() => {
+      img.style.opacity = 0;
+
+      setTimeout(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        img.src = images[currentIndex];
+        img.style.opacity = 1;
+      }, 400);
+
+    }, 3500);
+  }
 </script>
 
  <!-- DIRECTIONS / INSTRUÇÕES / INDICACIONES -->
@@ -1271,13 +1275,29 @@
   <div class="lang-en lang">
     <p class="mb-4">Supermarkets and convenience stores near Praia do Rosa:</p>
 
+    <!-- RECOMMENDED -->
+    <div class="card recommended">
+      <div class="flex-between">
+        <p class="title">Mercado do Silas</p>
+        <span class="badge highlight">⭐ Recommended • Best in the area</span>
+      </div>
+      <p class="desc">
+        The most complete supermarket in the region, great variety, quality products and fair prices.
+      </p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Mercado+do+Silas+Praia+do+Rosa+SC" target="_blank" class="btn-card">
+        View on Google Maps
+      </a>
+    </div>
+
     <div class="card">
       <div class="flex-between">
         <p class="title">Mercado Verde – Praia do Rosa</p>
         <span class="badge">~5 min</span>
       </div>
       <p class="desc">Well-stocked local supermarket with groceries, drinks and essentials.</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Mercado+Verde+Praia+do+Rosa+Imbituba+SC" target="_blank" class="btn-card">View on Google Maps</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Mercado+Verde+Praia+do+Rosa+Imbituba+SC" target="_blank" class="btn-card">
+        View on Google Maps
+      </a>
     </div>
 
     <div class="card">
@@ -1286,16 +1306,9 @@
         <span class="badge">~6 min</span>
       </div>
       <p class="desc">Convenient market for quick daily shopping.</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Market+Meia+Praia+Praia+do+Rosa+SC" target="_blank" class="btn-card">View on Google Maps</a>
-    </div>
-
-    <div class="card">
-      <div class="flex-between">
-        <p class="title">Vavá Market</p>
-        <span class="badge">~7 min</span>
-      </div>
-      <p class="desc">Local grocery store with extended hours.</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Vav%C3%A1+Market+Praia+do+Rosa+SC" target="_blank" class="btn-card">View on Google Maps</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Market+Meia+Praia+Praia+do+Rosa+SC" target="_blank" class="btn-card">
+        View on Google Maps
+      </a>
     </div>
   </div>
 
@@ -1303,13 +1316,29 @@
   <div class="lang-pt lang">
     <p class="mb-4">Supermercados e mercados próximos à Praia do Rosa:</p>
 
+    <!-- RECOMENDADO -->
+    <div class="card recommended">
+      <div class="flex-between">
+        <p class="title">Mercado do Silas</p>
+        <span class="badge highlight">⭐ Recomendado • Melhor da região</span>
+      </div>
+      <p class="desc">
+        O supermercado mais completo da região, com ótima variedade, bons preços e qualidade.
+      </p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Mercado+do+Silas+Praia+do+Rosa+SC" target="_blank" class="btn-card">
+        Ver no Google Maps
+      </a>
+    </div>
+
     <div class="card">
       <div class="flex-between">
         <p class="title">Mercado Verde – Praia do Rosa</p>
         <span class="badge">~5 min</span>
       </div>
       <p class="desc">Supermercado local completo, com alimentos, bebidas e itens essenciais.</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Mercado+Verde+Praia+do+Rosa+Imbituba+SC" target="_blank" class="btn-card">Ver no Google Maps</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Mercado+Verde+Praia+do+Rosa+Imbituba+SC" target="_blank" class="btn-card">
+        Ver no Google Maps
+      </a>
     </div>
 
     <div class="card">
@@ -1318,16 +1347,9 @@
         <span class="badge">~6 min</span>
       </div>
       <p class="desc">Mercado prático para compras rápidas do dia a dia.</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Market+Meia+Praia+Praia+do+Rosa+SC" target="_blank" class="btn-card">Ver no Google Maps</a>
-    </div>
-
-    <div class="card">
-      <div class="flex-between">
-        <p class="title">Vavá Market</p>
-        <span class="badge">~7 min</span>
-      </div>
-      <p class="desc">Mercado local com bom horário de funcionamento e variedade.</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Vav%C3%A1+Market+Praia+do+Rosa+SC" target="_blank" class="btn-card">Ver no Google Maps</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Market+Meia+Praia+Praia+do+Rosa+SC" target="_blank" class="btn-card">
+        Ver no Google Maps
+      </a>
     </div>
   </div>
 
@@ -1335,13 +1357,29 @@
   <div class="lang-es lang">
     <p class="mb-4">Supermercados y mercados cercanos a Praia do Rosa:</p>
 
+    <!-- RECOMENDADO -->
+    <div class="card recommended">
+      <div class="flex-between">
+        <p class="title">Mercado do Silas</p>
+        <span class="badge highlight">⭐ Recomendado • Mejor de la región</span>
+      </div>
+      <p class="desc">
+        El supermercado más completo de la región, con gran variedad, buenos precios y calidad.
+      </p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Mercado+do+Silas+Praia+do+Rosa+SC" target="_blank" class="btn-card">
+        Ver en Google Maps
+      </a>
+    </div>
+
     <div class="card">
       <div class="flex-between">
         <p class="title">Mercado Verde – Praia do Rosa</p>
         <span class="badge">~5 min</span>
       </div>
       <p class="desc">Supermercado local bien surtido con alimentos, bebidas y productos básicos.</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Mercado+Verde+Praia+do+Rosa+Imbituba+SC" target="_blank" class="btn-card">Ver en Google Maps</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Mercado+Verde+Praia+do+Rosa+Imbituba+SC" target="_blank" class="btn-card">
+        Ver en Google Maps
+      </a>
     </div>
 
     <div class="card">
@@ -1350,16 +1388,9 @@
         <span class="badge">~6 min</span>
       </div>
       <p class="desc">Mercado conveniente para compras rápidas.</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Market+Meia+Praia+Praia+do+Rosa+SC" target="_blank" class="btn-card">Ver en Google Maps</a>
-    </div>
-
-    <div class="card">
-      <div class="flex-between">
-        <p class="title">Vavá Market</p>
-        <span class="badge">~7 min</span>
-      </div>
-      <p class="desc">Tienda local con horario ampliado y buena variedad.</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Vav%C3%A1+Market+Praia+do+Rosa+SC" target="_blank" class="btn-card">Ver en Google Maps</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Market+Meia+Praia+Praia+do+Rosa+SC" target="_blank" class="btn-card">
+        Ver en Google Maps
+      </a>
     </div>
   </div>
 </section>
@@ -2101,14 +2132,27 @@
     // Carousel
     (function(){
       const images = [
-        "https://i.imgur.com/tzixzxq.jpeg","https://i.imgur.com/7SZxwIY.jpeg","https://i.imgur.com/5SlIkFE.jpeg",
-        "https://i.imgur.com/uMlD9T5.jpeg","https://i.imgur.com/V3asbIX.jpeg","https://i.imgur.com/YWsqeE0.jpeg",
-        "https://i.imgur.com/7AGF0V8.jpeg","https://i.imgur.com/uxGvavK.jpeg","https://i.imgur.com/PU70VMh.jpeg",
-        "https://i.imgur.com/9ltmx3D.jpeg","https://i.imgur.com/0OFGKeu.jpeg","https://i.imgur.com/n2rU6eW.jpeg",
-        "https://i.imgur.com/jDPBIcl.jpeg","https://i.imgur.com/FLySskB.jpeg","https://i.imgur.com/qp2HX6D.jpeg",
-        "https://i.imgur.com/VvsHqlI.jpeg","https://i.imgur.com/RCSdmmA.jpeg","https://i.imgur.com/cbYfwdW.jpeg",
-        "https://i.imgur.com/4dLtbpN.jpeg","https://i.imgur.com/ctCCpSO.jpeg","https://i.imgur.com/vRvQShU.jpeg"
-      ];
+  "https://i.imgur.com/VwlCln5.jpeg",
+  "https://i.imgur.com/Ck3ion8.jpeg",
+  "https://i.imgur.com/eN9W5ee.jpeg",
+  "https://i.imgur.com/bFC6IVi.jpeg",
+  "https://i.imgur.com/s2h6zNk.jpeg",
+  "https://i.imgur.com/1SEpAH2.jpeg",
+  "https://i.imgur.com/LaYE6ih.jpeg",
+  "https://i.imgur.com/FyqJdl6.jpeg",
+  "https://i.imgur.com/2bFkGQO.jpeg",
+  "https://i.imgur.com/bmWsENW.jpeg",
+  "https://i.imgur.com/LtkDiUb.jpeg",
+  "https://i.imgur.com/gSkYczg.jpeg",
+  "https://i.imgur.com/xPAnUke.jpeg",
+  "https://i.imgur.com/3vKOZtO.jpeg",
+  "https://i.imgur.com/CGQQRdh.jpeg",
+  "https://i.imgur.com/tWAkRrU.jpeg",
+  "https://i.imgur.com/Q4pTo5j.jpeg",
+  "https://i.imgur.com/3ndt7aC.jpeg",
+  "https://i.imgur.com/Db8bKZT.jpeg",
+  "https://i.imgur.com/qKUuR0R.jpeg"
+];
       let current = 0;
       const img = document.getElementById("carouselImage");
       if(!img) return;
